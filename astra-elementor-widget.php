@@ -3,7 +3,7 @@
  * Plugin Name: Astra Custom Meta Options for Elementor
  * Description: Custom Elementor widget to modify Astra page options inside Elementor builder.
  * Version: 1.0
- * Author: Your Name
+ * Author: South Florida Web Advisors using ChatGPT
  * 
  */
 
