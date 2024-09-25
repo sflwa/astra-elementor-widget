@@ -16,8 +16,8 @@ You can add more Astra fields by using the same approach in _register_controls a
 
 For example, to control the sidebar layout:
 
-php
-Copy code
+
+```php
 $this->add_control(
     'sidebar_layout',
     [
@@ -32,11 +32,12 @@ $this->add_control(
         'default' => 'default',
     ]
 );
+```
 In the render() function, update the respective Astra meta field:
 
-php
-Copy code
+```php
 update_post_meta( $post_id, 'astra-sidebar-layout', $settings['sidebar_layout'] );
+```
 
 =====================
 
