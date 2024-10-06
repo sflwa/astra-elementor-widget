@@ -65,6 +65,38 @@ class Astra_Elementor_Meta_Widget extends \Elementor\Widget_Base {
                 'default' => '',
             ]
         );
+        
+      $this->add_control(
+            'container_layout',
+           [
+                'label' => __( 'Container Layout', 'astra-elementor' ),
+                'type' => \Elementor\Controls_Manager::SELECT,
+               'options' => [
+					'default' => esc_html__( 'Customizer Setting', 'textdomain' ),
+					'normal-width-container' => esc_html__( 'Normal', 'textdomain' ),
+					'narrow-width-container' => esc_html__( 'Narrow', 'textdomain' ),
+                    'full-width-container' => esc_html__( 'Full Width', 'textdomain' ),
+				],
+				'default' => 'default',
+            ]
+        );
+
+        $this->add_control(
+            'container_style',
+           [
+                'label' => __( 'Container Style', 'astra-elementor' ),
+                'type' => \Elementor\Controls_Manager::SELECT,
+               'options' => [
+					'default' => esc_html__( 'Customizer Setting', 'textdomain' ),
+					'unboxed' => esc_html__( 'Unboxed', 'textdomain' ),
+					'boxed' => esc_html__( 'Boxed', 'textdomain' ),
+				],
+				'default' => 'default',
+            ]
+        );
+
+
+        
 
         $this->end_controls_section();
     }
@@ -79,7 +111,10 @@ class Astra_Elementor_Meta_Widget extends \Elementor\Widget_Base {
         update_post_meta( $post_id, 'ast-global-header-display', $settings['disable_header'] === 'yes' ? 'disabled' : '' );
         update_post_meta( $post_id, 'astra-footer-display', $settings['disable_footer'] === 'yes' ? 'disabled' : '' );
         update_post_meta( $post_id, 'site-post-title', $settings['disable_title'] === 'yes' ? 'disabled' : '' );
+        update_post_meta( $post_id, 'site-post-title', $settings['ast-site-content-layout'] );
+        update_post_meta( $post_id, 'site-content-style', $settings['container_style'] );
 
+        
         // Output content (optional, since we're working with meta fields only)
       //  echo '<div class="astra-meta-options-widget">';
       //  echo __( 'Astra page options have been updated.', 'astra-elementor' );
