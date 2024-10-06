@@ -43,6 +43,9 @@ update_post_meta( $post_id, 'astra-sidebar-layout', $settings['sidebar_layout'] 
 
 Changelog
 
+1.1 - 2024-10-06
+* Added Container Style & Layout
+
 1.0 - 2024-09-25
 * Generated Plugin
 * Added Show/Hide for Header, Footer and Title
