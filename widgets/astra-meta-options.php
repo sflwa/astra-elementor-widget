@@ -111,7 +111,7 @@ class Astra_Elementor_Meta_Widget extends \Elementor\Widget_Base {
         update_post_meta( $post_id, 'ast-global-header-display', $settings['disable_header'] === 'yes' ? 'disabled' : '' );
         update_post_meta( $post_id, 'astra-footer-display', $settings['disable_footer'] === 'yes' ? 'disabled' : '' );
         update_post_meta( $post_id, 'site-post-title', $settings['disable_title'] === 'yes' ? 'disabled' : '' );
-        update_post_meta( $post_id, 'site-post-title', $settings['ast-site-content-layout'] );
+        update_post_meta( $post_id, 'ast-site-content-layout', $settings['ast-site-content-layout'] );
         update_post_meta( $post_id, 'site-content-style', $settings['container_style'] );
 
         
