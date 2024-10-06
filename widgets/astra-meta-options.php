@@ -96,7 +96,7 @@ class Astra_Elementor_Meta_Widget extends \Elementor\Widget_Base {
         <div class="astra-meta-options-widget">
             {{{ settings.disable_header === 'yes' ? '<?php _e( "Header Disabled", "astra-elementor" ); ?>' : '<?php _e( "Header Enabled", "astra-elementor" ); ?>' }}}
             {{{ settings.disable_footer === 'yes' ? '<?php _e( "Footer Disabled", "astra-elementor" ); ?>' : '<?php _e( "Footer Enabled", "astra-elementor" ); ?>' }}}
-            {{{ settings.disable_footer === 'yes' ? '<?php _e( "Title Disabled", "astra-elementor" ); ?>' : '<?php _e( "Title Enabled", "astra-elementor" ); ?>' }}}
+            {{{ settings.disable_title === 'yes' ? '<?php _e( "Title Disabled", "astra-elementor" ); ?>' : '<?php _e( "Title Enabled", "astra-elementor" ); ?>' }}}
         </div>
         <?php
     }
